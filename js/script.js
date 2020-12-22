@@ -5,9 +5,22 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
+
+var scelta = prompt('inserisci pari o dispari');
+
+while (scelta != 'pari' && scelta != 'dispari'){// fino a quando la scelta utente è diversa da pari EE diversa da dispari allora ritorna QUI LA SCELTA E' INFINITA
+  alert('Attenzione hai inserito un valore diverso!');
+  scelta = prompt('inserisci pari o dispari');
+}
+
+
 var numeroUtente = parseInt(prompt('Scegli un numero da 1 a 5'));
 var numeroPc = generaNumero(1,5);
 
+while(numeroUtente < 1 || numeroUtente > 5){// fino a quando il numero è minore di uno O maggiore di cinque allora - QUI LA SCELTA E' OBBLIGATA
+  alert('hai scelto un numero non compreso tra 1 e 5');
+  numeroUtente = parseInt(prompt('Scegli un numero da 1 a 5'));
+}
 
 console.log(numeroUtente);
 console.log(numeroPc);
